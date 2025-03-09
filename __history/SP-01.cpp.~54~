@@ -1,0 +1,10 @@
+#define ODBC_STATIC
+#include <odbc/Connection.h>
+#pragma comment(lib, "odbccpp.lib")
+
+
+int main(int arg, char** progDir)
+{
+    odbc::ConnectionRef con;
+return 0;
+}

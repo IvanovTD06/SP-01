@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.543,=C:\Users\timiv\OneDrive\Рабочий стол\Проекты\SP-01\SP-01.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.590,C:\Users\timiv\OneDrive\Документы\Embarcadero\Studio\Projects\Project1.cbproj=C:\Users\timiv\OneDrive\Рабочий стол\Проекты\SP-01\SP-01.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.581,C:\Users\timiv\OneDrive\Документы\Embarcadero\Studio\Projects\Project1PCH1.h=C:\Users\timiv\OneDrive\Рабочий стол\Проекты\SP-01\SP-01PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.864,=C:\Users\timiv\OneDrive\Документы\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+  </Transactions>
+</BorlandProject>
