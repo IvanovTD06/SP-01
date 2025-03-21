@@ -1,0 +1,9 @@
+
+
+char connString[] = L"Driver={PostgreSQL ODBC Driver(UNICODE)};SERVER=localhost;DATABASE=DICOM Container; PASSWORD=Mvs689101601; UID=postgres";
+char query[] = L"SELECT * FROM Table";
+
+int main(int arg, char** progDir)
+{
+    return 0;
+}

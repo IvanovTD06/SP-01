@@ -1,0 +1,47 @@
+#include <iostream>
+#include <stdio.h>
+#include <Windows.h>
+#include <sqlext.h>
+#include <locale.h>
+
+
+WCHAR connString[] = L"Driver={PostgreSQL ODBC Driver(UNICODE)};SERVER=localhost;DATABASE=DICOM Container; PASSWORD=Mvs689101601; UID=postgres";
+WCHAR query[] = L"SELECT * FROM Table";
+
+int main(int arg, char** progDir)
+{
+
+    HENV    hEnv = NULL;
+    HDBC    hDbc = NULL;
+    HSTMT hStmt = NULL;
+    int iConnStrLength2Ptr;
+    WCHAR szConnStrOut[256];
+    SQLINTEGER rowCount = 0;
+    SQLSMALLINT fieldCount = 0, currentField = 0;
+    SQLWCHAR buf[128], colName[128];
+    SQLLEN ret;
+
+    /* ODBC API return status */
+    RETCODE rc;
+
+    setlocale(LC_ALL, "Russian");
+
+    /* Allocate an environment handle */
+    rc = SQLAllocEnv(&hEnv);
+    /* Allocate a connection handle */
+    rc = SQLAllocConnect(hEnv, &hDbc);
+
+    /* Connect to the database */
+    rc = SQLDriverConnect(hDbc, NULL, (WCHAR*)connString,
+        SQL_NTS, (WCHAR*)szConnStrOut,
+        255, (SQLSMALLINT*)&iConnStrLength2Ptr, SQL_DRIVER_NOPROMPT);
+    wprintf(szConnStrOut);
+    SQLExecDirectW(hStmt, query, sizeof(query) / sizeof(char));
+
+    /* Disconnect and free up allocated handles */
+    SQLDisconnect(hDbc);
+    SQLFreeHandle(SQL_HANDLE_DBC, hDbc);
+    SQLFreeHandle(SQL_HANDLE_ENV, hEnv);
+
+    return 0;
+}

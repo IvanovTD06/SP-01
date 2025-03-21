@@ -1,6 +1,5 @@
 
 #include <odbc/Connection.h>
-#define ODBC_STATIC
 
 
 

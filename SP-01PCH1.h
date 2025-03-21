@@ -1,4 +1,4 @@
-#ifdef _WIN32
-#include <tchar.h>
+#ifdef _WIN64
+    #include <tchar.h>
 #endif
 
