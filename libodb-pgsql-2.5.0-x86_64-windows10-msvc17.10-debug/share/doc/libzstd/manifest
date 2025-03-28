@@ -1,0 +1,15 @@
+: 1
+name: libzstd
+version: 1.5.5+1
+language: c
+project: zstd
+summary: Zstandard lossless compression algorithm C library
+license: BSD-3-Clause OR GPL-2.0-only
+description-file: README.md
+package-description-file: PACKAGE-README.md
+changes-file: CHANGELOG
+url: https://github.com/facebook/zstd
+package-url: https://github.com/build2-packaging/zstd
+package-email: packaging@build2.org ; Mailing list.
+depends: * build2 >= 0.16.0
+depends: * bpkg >= 0.16.0

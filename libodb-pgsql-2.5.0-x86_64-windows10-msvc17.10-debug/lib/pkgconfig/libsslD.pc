@@ -1,0 +1,6 @@
+Name: libssl
+Version: 3.3.1
+Description: C library providing SSLv3 and TLS implementations
+URL: https://www.openssl.org/
+Cflags: -I${pcfiledir}\\..\\..\\include
+Libs: -L${pcfiledir}\\.. -lsslD -lcryptoD

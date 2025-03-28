@@ -1,0 +1,34 @@
+: 1
+name: libpq
+
+# Note: remember to update doc-url below!
+#
+version: 14.1.0+6
+upstream-version: 14.1
+
+project: postgresql
+summary: PostgreSQL C API client library
+license: PostgreSQL ; Permissive free software license.
+topics: C, PostgreSQL, SQL, relational database
+description-file: README
+url: https://www.postgresql.org/
+doc-url: https://www.postgresql.org/docs/14/libpq.html
+src-url: https://git.build2.org/cgit/packaging/postgresql/postgresql/tree/libpq/
+package-url: https://git.build2.org/cgit/packaging/postgresql/
+email: pgsql-general@lists.postgresql.org ; Mailing list.
+package-email: packaging@build2.org ; Mailing list.
+build-warning-email: builds@build2.org
+builds: all relocatable
+builds: -wasm
+depends: * build2 >= 0.15.0
+depends: * bpkg >= 0.15.0
+depends: libcrypto >= 1.1.1
+depends: libssl >= 1.1.1
+
+# System package mapping.
+#
+# Let's map the distribution package X.Y version to the bpkg package X.Y.0
+# version.
+#
+debian-to-downstream-version: /(.*)/\1.0/
+fedora-to-downstream-version: /(.*)/\1.0/

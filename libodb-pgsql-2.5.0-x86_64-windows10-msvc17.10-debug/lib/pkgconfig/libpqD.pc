@@ -1,0 +1,6 @@
+Name: libpq
+Version: 14.1.0+6
+Description: PostgreSQL C API client library
+URL: https://www.postgresql.org/
+Cflags: -I${pcfiledir}\\..\\..\\include
+Libs: -L${pcfiledir}\\.. -lpqD

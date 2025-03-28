@@ -1,0 +1,6 @@
+Name: libzstd
+Version: 1.5.5+1
+Description: Zstandard lossless compression algorithm C library
+URL: https://github.com/facebook/zstd
+Cflags: -I${pcfiledir}\\..\\..\\include
+Libs: -L${pcfiledir}\\.. -lzstdD

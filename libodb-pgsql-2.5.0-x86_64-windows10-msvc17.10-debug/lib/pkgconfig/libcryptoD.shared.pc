@@ -1,0 +1,10 @@
+Name: libcrypto
+Version: 3.3.1
+Description: C library providing general cryptography and X.509 support
+URL: https://www.openssl.org/
+Cflags: -I${pcfiledir}\\..\\..\\include
+Libs: -L${pcfiledir}\\.. -lcryptoD
+
+build2.metadata = 1
+
+cc.type = c

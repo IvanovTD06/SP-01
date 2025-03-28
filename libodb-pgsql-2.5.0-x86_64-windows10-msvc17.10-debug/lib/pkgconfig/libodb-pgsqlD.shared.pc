@@ -1,0 +1,10 @@
+Name: libodb-pgsql
+Version: 2.5.0
+Description: PostgreSQL ODB runtime library
+URL: https://www.codesynthesis.com/products/odb/
+Cflags: -I${pcfiledir}\\..\\..\\include -DLIBODB_PGSQL_SHARED
+Libs: -L${pcfiledir}\\.. -lodb-pgsqlD -lodbD
+
+build2.metadata = 1
+
+cc.type = cxx

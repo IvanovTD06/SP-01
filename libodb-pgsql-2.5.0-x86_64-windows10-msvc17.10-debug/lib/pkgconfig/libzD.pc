@@ -1,0 +1,6 @@
+Name: libz
+Version: 1.2.1200+5
+Description: General-purpose lossless data compression C library
+URL: https://www.zlib.net/
+Cflags: -I${pcfiledir}\\..\\..\\include
+Libs: -L${pcfiledir}\\.. -lzD
