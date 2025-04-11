@@ -3,7 +3,7 @@ int main(int argc, char* argv[])
 	setlocale(LC_ALL, "");
 	try
 	{
-		soci::sessio sql("postgresql", "dbname=SP-01DB user=IvanovTD06 password=Mvs689101601");
+		soci::session sql("postgresql", "dbname=SP-01DB user=IvanovTD06 password=Mvs689101601");
 		sql << "CREATE TABLE IF NOT EXISTS test (id SERIAL PRIMARY KEY, value TEXT)";
 		sql << "INSERT INTO test (value) VALUES ('Hello World')";
 
